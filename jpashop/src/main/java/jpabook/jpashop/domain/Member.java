@@ -8,7 +8,7 @@ import java.util.List;
 import static javax.persistence.GenerationType.AUTO;
 
 @Entity
-public class Member {
+public class Member extends BaseEntity{
     @Id @GeneratedValue(strategy = AUTO)
     @Column(name="MEMBER_ID")
     private Long id;

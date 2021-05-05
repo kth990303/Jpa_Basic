@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Item {
+// 실무에선 상속 관계를 꼭 필요할 때만 사용한다.
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn
+public abstract class Item extends BaseEntity {
     @Id @GeneratedValue
     @Column(name="ITEM_ID")
     private Long id;
